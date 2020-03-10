@@ -1,5 +1,5 @@
 class ProductsController < OpenReadController
-  before_action :set_product, only: [:show, :update, :destroy]
+  before_action :set_product, only: [:update, :destroy]
 
   # GET /products
   def index
@@ -10,7 +10,7 @@ class ProductsController < OpenReadController
 
   # GET /products/1
   def show
-    render json: Example.find(params[:id])
+    render json: Product.find(params[:id])
   end
 
   # POST /products
